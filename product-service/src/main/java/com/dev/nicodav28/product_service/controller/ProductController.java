@@ -27,4 +27,8 @@ public class ProductController {
     public List<ProductResponse> getAllProducts(){
         return productService.getAllProducts();
     }
+
+    //todo: listar 1 producto especifico
+    //todo: actualizar productos
+    //todo: eliminar productos
 }

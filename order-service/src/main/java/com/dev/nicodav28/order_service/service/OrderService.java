@@ -5,6 +5,7 @@ import com.dev.nicodav28.order_service.dto.OrderRequest;
 import com.dev.nicodav28.order_service.model.Order;
 import com.dev.nicodav28.order_service.model.OrderLineItems;
 import com.dev.nicodav28.order_service.repository.OrderRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,7 @@ public class OrderService {
 
     private final OrderRepository orderRepository;
 
+    @Transactional
     public Order placeOrder(OrderRequest orderRequest) {
         Order order = new Order();
         order.setOrderNumber(UUID.randomUUID().toString());

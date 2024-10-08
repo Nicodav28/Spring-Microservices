@@ -19,4 +19,9 @@ public class OrderController {
     public Order placeOrder(@RequestBody OrderRequest orderRequest) {
         return orderService.placeOrder(orderRequest);
     }
+
+    //todo: listar todas la ordenes
+    //todo: listar 1 orden especifico
+    //todo: actualizar ordenes
+    //todo: eliminar ordenes
 }
